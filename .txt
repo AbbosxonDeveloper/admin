@@ -1,10 +1,11 @@
-1) login / Registr     Ok
-5) category / aksiya   O
-3) Product             
-4) Like / Karzinka     OK
-2) Dastavka            OK
+// Food  `              CRUD
+// workCategory
+// category
+// Fillial
+// workFililal
+// Product
+// Admin
+// Auth
 
-1) Nodir aka 4
-2) Jaur 3
-3) Jabbor 1
-4) Akmal 2
+Akmal    1, 5, 8, 7
+Abbosxon 2, 6, 3, 4

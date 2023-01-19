@@ -6,6 +6,11 @@ export interface admin {
     password: string
 }
 
+export interface food {
+    id?: string,
+    title: string
+}
+
 declare global {
     namespace Express {
         export interface Request {
