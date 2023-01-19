@@ -1,61 +1,61 @@
 CREATE TABLE Admin (
-  id uuid,
-  email varchar,
-  password varchar(10)
+  id uuid default gen_random_uuid() not null PRIMARY KEY,
+  email varchar not null,
+  password varchar(10) not null
 );
 
 CREATE TABLE Food (
-  id uuid,
-  title varchar
+  id uuid default gen_random_uuid() not null PRIMARY KEY,
+  title varchar not null
 );
 
 CREATE TABLE work (
-  id uuid,
-  day varchar(25),
-  active boolean,
-  start varchar(10),
-  end varchar(10),
-  categoryId uuid
+  id uuid default gen_random_uuid() not null PRIMARY KEY,
+  day varchar(25) not null,
+  active boolean not null,
+  dataStart varchar(10) not null,
+  dataEnd varchar(10) not null,
+  categoryId uuid not null
 );
 
 CREATE TABLE Categories (
-  id uuid,
-  title varchar(65),
-  description varchar(200),
-  location varchar(200),
+  id uuid default gen_random_uuid() not null PRIMARY KEY,
+  title varchar(65) not null,
+  description varchar(200) not null,
+  location varchar(200) not null,
   google varchar(100),
   yandex varchar(100),
-  uploadImage text,
+  uploadImage text not null,
   foodId uuid
 );
 
 CREATE TABLE fililal (
-  id uuid,
-  title varchar(65),
-  manzil varchar(100),
+  id uuid default gen_random_uuid() not null PRIMARY KEY,
+  title varchar(65) not null,
+  manzil varchar(100) not null,
   google varchar(100),
   yandex varchar(100),
-  categoryId uuid
+  categoryId uuid not null
 );
 
 CREATE TABLE fillialWork (
-  id uuid,
-  day varchar(25),
-  active boolean,
-  start varchar(10),
-  end varchar(10),
+  id uuid default gen_random_uuid() not null PRIMARY KEY,
+  day varchar(25) not null,
+  active boolean not null,
+  dataStart varchar(10) not null,
+  dataEnd varchar(10) not null,
   fillialId uuid
 );
 
 CREATE TABLE Product (
-  id uuid,
-  title varchar(65),
-  description varchar(150),
-  time varchar(65),
-  price integer,
-  img text,
-  payment enum,
-  fillialId uuid,
+  id uuid default gen_random_uuid() not null PRIMARY KEY,
+  title varchar(65) not null,
+  description varchar(150) not null,
+  time varchar(65) not null,
+  price integer not null,
+  img text not null,
+  payment text not null,   --Enum
+  fillialId uuid not null,
   FoodId uuid
 );
 
